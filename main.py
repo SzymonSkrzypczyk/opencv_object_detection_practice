@@ -22,7 +22,7 @@ while True:
     matches = bf.match(descriptors_ref, descriptors)
     matches = sorted(matches, key=lambda x: x.distance)
 
-    frame = cv2.drawMatches(reference_image, keypoints_ref, frame, keypoints, matches[:10], None, flags=1)
+    # frame = cv2.drawMatches(reference_image, keypoints_ref, frame, keypoints, matches[:10], None, flags=1)
     cv2.imshow('frame', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
