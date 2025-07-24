@@ -2,6 +2,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+# https://github.com/ChiekoN/OpenCV_SSD_MobileNet/blob/master/model/frozen_inference_graph.pb
 model = cv2.dnn.readNet(
     model="../models/DenseNet_121.caffemodel",
     config="../models/DenseNet_121.prototxt",
@@ -34,7 +35,6 @@ while imcap.isOpened():
 
     cv2.imshow('Webcam', frame)
 
-    # Exit on pressing 'q'
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
